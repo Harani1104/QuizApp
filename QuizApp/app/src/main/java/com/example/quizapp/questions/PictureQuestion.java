@@ -3,43 +3,44 @@ package com.example.quizapp.questions;
 public class PictureQuestion {
 
     // answerResId will store question
-    private int questionResId, trueAnswerIndex;
-    private int[] answersResId;
-    // Asnwered will store if the user answered correct or not on this question
-    private boolean isAnsweredTrue;
+    private int answerResId;
 
-    public PictureQuestion(int questionResId, int trueAnswerIndex, int[] answersResId) {
+    // answerTrue will store correct answer
+    // of the question provided
+    private boolean answerTrue;
+
+    public PictureQuestion(int answerResId, boolean answerTrue)
+    {
         // setting the values through
         // arguments passed in constructor
-        this.questionResId = questionResId;
-        this.answersResId = answersResId;
-        this.trueAnswerIndex = trueAnswerIndex;
+        this.answerResId = answerResId;
+        this.answerTrue = answerTrue;
     }
 
-    public int getQuestionResId()
+    // returning the question passed
+    public int getAnswerResId()
     {
-        return questionResId;
+        return answerResId;
     }
-    public void setQuestionResId(int questionResId)
+
+    // setting the question passed
+    public void setAnswerResId(int answerResId)
     {
-        this.questionResId = questionResId;
+        this.answerResId = answerResId;
     }
 
-    public boolean getAnsweredTrue() {
-        return isAnsweredTrue;
-    }
-    public void setAnsweredTrue(boolean answeredTrue) {
-        this.isAnsweredTrue = answeredTrue;
-    }
-
-    public int getTrueAnswerIndex() {
-        return trueAnswerIndex;
-    }
-    public void setTrueAnswerIndex(int trueAnswerIndex) {
-        this.trueAnswerIndex = trueAnswerIndex;
+    // returning the correct answer
+    // of question
+    public boolean isAnswerTrue()
+    {
+        return answerTrue;
     }
 
-    public int[] getAnswersResId() { return answersResId; }
-    public void setAnswersResId(int[] answersResId) { this.answersResId = answersResId; }
+    // setting the correct
+    // ans of question
+    public void setAnswerTrue(boolean answerTrue)
+    {
+        this.answerTrue = answerTrue;
+    }
 }
 
