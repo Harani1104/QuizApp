@@ -101,14 +101,16 @@ public class MainActivity extends AppCompatActivity
                                 View.INVISIBLE);
                         falseButton.setVisibility(
                                 View.INVISIBLE);
-                        if (correct > 3)
+                        if (correct < 7)
 
                             questionTextView.setText(
                                     "Total correct answers: " + correct
                                             + " "
                                             + "out of 6");
                             // showing correctness
-
+                        else if (correct >= 7){
+                            questionTextView.setText("You broke the system, there's only 6 questions, but you got " + correct + " points");
+                        }
                     }
                     else {
                         updateQuestion();
