@@ -7,15 +7,15 @@
     <string name="false_text">false</string>
     <string name="correct_answer">That\'s correct</string>
     <string name="wrong_answer">That\'s incorrect</string>
-    <string name="a">Question1</string>
-    <string name="b">Question2\n \t
-                     <b>Test1</b>\n \t
-                     <b>Test2</b></string>
+    <string name="a">This is true</string>
+    <string name="b">Green is wrong\n \t
+                     <b>Red is correct</b>\n \t
+                     </string>
     <string name="c">Do Question3\n \t
-                     <b>Test3</b></string>
-    <string name="d">Question4 <b>Test4</b></string>
-    <string name="e">Question5</string>
-    <string name="f">Question6</string>
+                     <b>Green is correct</b></string>
+    <string name="d">Question4 <b>Green is correct</b></string>
+    <string name="e">Green is correct</string>
+    <string name="f">Red is correct</string>
     <string name="next_text">next</string>
     <string name="prev_text">previous</string>
 
