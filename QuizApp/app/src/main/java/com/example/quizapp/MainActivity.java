@@ -104,9 +104,9 @@ public class MainActivity extends AppCompatActivity
                         if (correct > 3)
 
                             questionTextView.setText(
-                                    "CORRECTNESS IS " + correct
+                                    "Total correct answers: " + correct
                                             + " "
-                                            + "OUT OF 6");
+                                            + "out of 6");
                             // showing correctness
 
                     }
