@@ -1,176 +1,141 @@
 package com.example.quizapp;
 
-import android.annotation.SuppressLint;
-import android.os.Build;
 import android.os.Bundle;
-import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ImageButton;
-import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
-import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.quizapp.questions.PictureQuestion;
+import com.example.quizapp.questions.Quizmodul;
+import com.google.android.material.bottomsheet.BottomSheetDialog;
 
-public class MainActivity extends AppCompatActivity
-        implements View.OnClickListener {
+import java.util.ArrayList;
+import java.util.Locale;
+import java.util.Random;
+
+
+public class MainActivity extends AppCompatActivity {
     // setting up things
-    private Button falseButton;
-    private Button trueButton;
-    private Button nextButton;
-    private Button prevButton;
+    private Button button1;
+    private Button button2;
     private Button button3;
     private Button button4;
-    private ImageView Image;
     private TextView questionTextView;
-    private int correct = 0;
-    // to keep current question track
-    private int currentQuestionIndex = 0;
+    private TextView questionAttempTV;
+    private ArrayList <Quizmodul> quizModulArrayList;
+    Random random;
+    int currentScore = 0;
+    int questAttempt = 1;
+    int currentPos;
 
-    private PictureQuestion[] questionBank = new PictureQuestion[] {
-            // array of objects of class Question
-            // providing questions from string
-            // resource and the correct ans
-            new PictureQuestion(R.string.a, true),
-            new PictureQuestion(R.string.b, false),
-            new PictureQuestion(R.string.c, true),
-            new PictureQuestion(R.string.d, true),
-            new PictureQuestion(R.string.e, true),
-            new PictureQuestion(R.string.f, false),
-
-    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        // setting up the buttons
-        // associated with id
-        falseButton = findViewById(R.id.false_button);
-        trueButton = findViewById(R.id.true_button);
+
+        questionTextView = findViewById(R.id.questionTextView);
+        questionTextView = findViewById(R.id.questionAttemptTV);
+        button1 = findViewById(R.id.button1);
+        button2 = findViewById(R.id.button2);
         button3 = findViewById(R.id.button3);
         button4 = findViewById(R.id.button4);
-        nextButton = findViewById(R.id.next_button);
-        prevButton = findViewById(R.id.prev_button);
-        // register our buttons to listen to
-        // click events
-        questionTextView
-                = findViewById(R.id.answer_text_view);
-        Image = findViewById(R.id.myimage);
-        falseButton.setOnClickListener(this);
-        trueButton.setOnClickListener(this);
-        nextButton.setOnClickListener(this);
-        prevButton.setOnClickListener(this);
-    }
+        quizModulArrayList = new ArrayList<>();
+        random = new Random();
+        currentPos = random.nextInt(quizModulArrayList.size());
 
-    @SuppressLint("SetTextI18n")
-    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
-    @Override
-    public void onClick(View v)
-    {
-        // checking which button is
-        // clicked by user
-        // in this case user choose false
-        switch (v.getId()) {
-            case R.id.false_button:
-                checkAnswer(false);
-                break;
 
-            case R.id.true_button:
-                checkAnswer(true);
-                break;
-            case R.id.button3:
-                checkAnswer(false);
-                break;
-            case R.id.button4:
-                checkAnswer(true);
-                break;
-            case R.id.next_button:
-                // go to next question
-                // limiting question bank range
-                if (currentQuestionIndex < 7) {
-                    currentQuestionIndex
-                            = currentQuestionIndex + 1;
-                    // we are safe now!
-                    // last question reached
-                    // making buttons
-                    // invisible
-                    if (currentQuestionIndex == 6) {
-                        questionTextView.setText(getString(
-                                R.string.correct, correct));
-                        nextButton.setVisibility(
-                                View.INVISIBLE);
-                        prevButton.setVisibility(
-                                View.INVISIBLE);
-                        trueButton.setVisibility(
-                                View.INVISIBLE);
-                        falseButton.setVisibility(
-                                View.INVISIBLE);
-                        if (correct < 7)
+        setData(currentPos);
+        getQuizQuestion(quizModulArrayList);
 
-                            questionTextView.setText(
-                                    "Total correct answers: " + correct
-                                            + " "
-                                            + "out of 6");
-                            // Known bug if you click the same answer more than once
-                        else if (correct >= 7){
-                            questionTextView.setText("You broke the system, there's only 6 questions, but you got " + correct + " points");
-                        }
-                    }
-                    else {
-                        updateQuestion();
-                    }
+        button1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (quizModulArrayList.get(currentPos).getAnswer().trim().toLowerCase().equals(button1.getText().toString().trim().toLowerCase())){
+                    currentScore++;
                 }
-
-                break;
-            case R.id.prev_button:
-                if (currentQuestionIndex > 0) {
-                    currentQuestionIndex
-                            = (currentQuestionIndex - 1)
-                            % questionBank.length;
-                    updateQuestion();
+                questAttempt++;
+                currentPos = random.nextInt(quizModulArrayList.size());
+                setData(currentPos);
+            }
+        });
+        button2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (quizModulArrayList.get(currentPos).getAnswer().trim().toLowerCase().equals(button2.getText().toString().trim().toLowerCase())){
+                    currentScore++;
                 }
-        }
+                questAttempt++;
+                currentPos = random.nextInt(quizModulArrayList.size());
+                setData(currentPos);
+            }
+        });
+        button3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (quizModulArrayList.get(currentPos).getAnswer().trim().toLowerCase().equals(button3.getText().toString().trim().toLowerCase())){
+                    currentScore++;
+                }
+                questAttempt++;
+                currentPos = random.nextInt(quizModulArrayList.size());
+                setData(currentPos);
+            }
+        });
+        button4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (quizModulArrayList.get(currentPos).getAnswer().trim().toLowerCase().equals(button4.getText().toString().trim().toLowerCase())){
+                    currentScore++;
+                }
+                questAttempt++;
+                currentPos = random.nextInt(quizModulArrayList.size());
+                setData(currentPos);
+            }
+        });
     }
 
-    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
-    private void updateQuestion()
-    {
-        Log.d("Current",
-                "onClick: " + currentQuestionIndex);
-
-        questionTextView.setText(
-                questionBank[currentQuestionIndex]
-                        .getAnswerResId());
-
+    private void ShowScore(){
+        BottomSheetDialog bottomSD = new BottomSheetDialog(MainActivity.this);
+        View bottomSheetView = LayoutInflater.from(getApplicationContext()).inflate(R.layout.score_handling,(LinearLayout)findViewById(R.id.handleScore));
+        TextView scoreText = bottomSheetView.findViewById(R.id.TVScore);
+        Button restartButton = bottomSheetView.findViewById(R.id.ScoreButton);
+        scoreText.setText("Your Score is " + currentScore + " /10");
+        restartButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                currentPos = random.nextInt(quizModulArrayList.size());
+                setData(currentPos);
+                questAttempt = 1;
+                currentScore = 0;
+                bottomSD.dismiss();
+            }
+        });
+        bottomSD.setCancelable(false);
+        bottomSD.setContentView(bottomSheetView);
+        bottomSD.show();
     }
-    private void checkAnswer(boolean userChooseCorrect)
-    {
-        boolean answerIsTrue
-                = questionBank[currentQuestionIndex]
-                .isAnswerTrue();
-        // getting correct ans of current question
-        int toastMessageId;
-        // if ans matches with the
-        // button clicked
 
-        if (userChooseCorrect == answerIsTrue) {
-            toastMessageId = R.string.correct_answer;
-            correct++;
+    private void setData(int currentPos) {
+        questionAttempTV.setText("Questions attempted: " + questAttempt + " / 10");
+        if (questAttempt == 10){
+            ShowScore();
         }
         else {
-            // showing toast
-            // message correct
-            toastMessageId = R.string.wrong_answer;
+            questionTextView.setText(quizModulArrayList.get(currentPos).getQuestion());
+            button1.setText(quizModulArrayList.get(currentPos).getChoice1());
+            button2.setText(quizModulArrayList.get(currentPos).getChoice2());
+            button3.setText(quizModulArrayList.get(currentPos).getChoice3());
+            button4.setText(quizModulArrayList.get(currentPos).getChoice4());
+        }
         }
 
-        Toast
-                .makeText(MainActivity.this, toastMessageId,
-                        Toast.LENGTH_SHORT)
-                .show();
+    private void getQuizQuestion(ArrayList<Quizmodul> quizmodul) {
+        quizModulArrayList.add(new Quizmodul("Biggest planet in our solar system","Earth","Saturn","Jupiter","Mars","Jupiter"));
+        quizModulArrayList.add(new Quizmodul("Name of a flower","Golden Retriever","Sun","Google","Rose","Rose"));
+        quizModulArrayList.add(new Quizmodul("Which of these can not move","A Rock","A Lion","A Human","A Monkey","A Rock"));
+        quizModulArrayList.add(new Quizmodul("1 + 2 = ?","1","2","3","4","3"));
     }
 }

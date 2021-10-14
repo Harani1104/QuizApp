@@ -1,22 +1,3 @@
 <resources>
     <string name="app_name">QuizApp</string>
-
-    <string name="correct"><b>Correct answers: </b> \n
-                           <b>%1$d</b> out of 6</string>
-    <string name="true_text">true</string>
-    <string name="false_text">false</string>
-    <string name="correct_answer">That\'s correct</string>
-    <string name="wrong_answer">That\'s incorrect</string>
-    <string name="a">This is true</string>
-    <string name="b">Green is wrong\n \t
-                     <b>Red is correct</b>\n \t
-                     </string>
-    <string name="c">Do Question3\n \t
-                     <b>Green is correct</b></string>
-    <string name="d">Question4 <b>Green is correct</b></string>
-    <string name="e">Green is correct</string>
-    <string name="f">Red is correct</string>
-    <string name="next_text">next</string>
-    <string name="prev_text">previous</string>
-
 </resources>
