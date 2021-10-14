@@ -9,19 +9,24 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <!--ImageView used for showing pictures along with questions-->
-    <ImageView
-        android:id="@+id/myimage"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+
 
     <!--TextView used for showing questions on screen-->
     <TextView
-        android:id="@+id/answer_text_view"
+        android:id="@+id/questionAttemptTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text = "Total Questions"
+        android:textSize="30sp"
+
+
+        />
+    <TextView
+        android:id="@+id/questionTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:padding="10dp"
-        android:text="@string/a"
+        android:text="Question"
         android:textColor="@android:color/black"
         android:textSize="30sp" />
 
@@ -31,9 +36,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
 
-        <!--TrueButton-->
+        <!--Button 1-->
         <Button
-            android:id="@+id/true_button"
+            android:id="@+id/button1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginRight="20dp"
@@ -42,9 +47,9 @@
             android:textSize="20sp" />
 
 
-        <!--FalseButton-->
+        <!--Button 2-->
         <Button
-            android:id="@+id/false_button"
+            android:id="@+id/button2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
@@ -82,29 +87,4 @@
         android:text="Button 4"
         android:textSize="20sp" />
 </LinearLayout>
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-
-        <!--PreviousButton-->
-        <Button
-            android:id="@+id/prev_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:backgroundTint="#DFD2D1"
-            android:text="@string/prev_text"
-            android:textColor="@color/black" />
-
-
-        <!--NextButton-->
-        <Button
-            android:id="@+id/next_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:backgroundTint="#DFD2D1"
-
-            android:text="@string/next_text"
-            android:textColor="@color/black" />
-
-    </LinearLayout>
 </LinearLayout>
