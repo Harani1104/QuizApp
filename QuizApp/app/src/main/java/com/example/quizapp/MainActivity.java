@@ -20,8 +20,10 @@ public class MainActivity extends AppCompatActivity
     // setting up things
     private Button falseButton;
     private Button trueButton;
-    private ImageButton nextButton;
-    private ImageButton prevButton;
+    private Button nextButton;
+    private Button prevButton;
+    private Button button3;
+    private Button button4;
     private ImageView Image;
     private TextView questionTextView;
     private int correct = 0;
@@ -50,6 +52,8 @@ public class MainActivity extends AppCompatActivity
         // associated with id
         falseButton = findViewById(R.id.false_button);
         trueButton = findViewById(R.id.true_button);
+        button3 = findViewById(R.id.button3);
+        button4 = findViewById(R.id.button4);
         nextButton = findViewById(R.id.next_button);
         prevButton = findViewById(R.id.prev_button);
         // register our buttons to listen to
@@ -79,7 +83,12 @@ public class MainActivity extends AppCompatActivity
             case R.id.true_button:
                 checkAnswer(true);
                 break;
-
+            case R.id.button3:
+                checkAnswer(false);
+                break;
+            case R.id.button4:
+                checkAnswer(true);
+                break;
             case R.id.next_button:
                 // go to next question
                 // limiting question bank range
@@ -107,7 +116,7 @@ public class MainActivity extends AppCompatActivity
                                     "Total correct answers: " + correct
                                             + " "
                                             + "out of 6");
-                            // showing correctness
+                            // Known bug if you click the same answer more than once
                         else if (correct >= 7){
                             questionTextView.setText("You broke the system, there's only 6 questions, but you got " + correct + " points");
                         }
@@ -137,32 +146,7 @@ public class MainActivity extends AppCompatActivity
         questionTextView.setText(
                 questionBank[currentQuestionIndex]
                         .getAnswerResId());
-        // setting the textview with new question
-//        switch (currentQuestionIndex) {
-//            case 1:
-//                // setting up image for each
-//                // question
-//                Image.setImageResource(R.drawable.f2);
-//                break;
-//            case 2:
-//                Image.setImageResource(R.drawable.f3);
-//                break;
-//            case 3:
-//                Image.setImageResource(R.drawable.f4);
-//                break;
-//            case 4:
-//                Image.setImageResource(R.drawable.f5);
-//                break;
-//            case 5:
-//                Image.setImageResource(R.drawable.f6);
-//                break;
-//            case 6:
-//                Image.setImageResource(R.drawable.f7);
-//                break;
-//            case 7:
-//                Image.setImageResource(R.drawable.f1);
-//                break;
-//        }
+
     }
     private void checkAnswer(boolean userChooseCorrect)
     {
