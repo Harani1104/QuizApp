@@ -31,17 +31,17 @@ public class StartFragment extends Fragment {
 
         //sends the user home(frame 3)
         //todo implement login
-        Button buttonToHome = view.findViewById(R.id.buttonToHome);
-        buttonToHome.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.action_loginFragment_to_homeFragment));
+        Button buttonLogin = view.findViewById(R.id.buttonLogin);
+        buttonLogin.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.action_startFragment_to_loginFragment));
 
         //sends the user to userregistration (frame 2)
         //TODO implement user registration
         Button buttonNewUser = view.findViewById(R.id.buttonNewUser);
-        buttonNewUser.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.action_loginFragment_to_registerFragment));
+        buttonNewUser.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.action_startFragment_to_registerFragment));
 
         //køyrer ein ferdig quiz lagd for å teste (frame 6, deretter 7)
         //TODO implement guest user
         Button buttonSkipTOQuiz = view.findViewById(R.id.buttonSkipToQuiz);
-        buttonSkipTOQuiz.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.action_loginFragment_to_quizFragment));
+        buttonSkipTOQuiz.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.action_startFragment_to_quizFragment));
     }
 }
