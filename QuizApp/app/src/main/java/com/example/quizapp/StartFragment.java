@@ -29,7 +29,7 @@ public class StartFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        //sends the user home(frame 3)
+        //sends the user to Login
         //todo implement login
         Button buttonLogin = view.findViewById(R.id.buttonLogin);
         buttonLogin.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.action_startFragment_to_loginFragment));
@@ -40,6 +40,7 @@ public class StartFragment extends Fragment {
         buttonNewUser.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.action_startFragment_to_registerFragment));
 
         //køyrer ein ferdig quiz lagd for å teste (frame 6, deretter 7)
+        //press the small buttons to go to next/prev question
         //TODO implement guest user
         Button buttonSkipTOQuiz = view.findViewById(R.id.buttonSkipToQuiz);
         buttonSkipTOQuiz.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.action_startFragment_to_quizFragment));

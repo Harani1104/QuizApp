@@ -28,7 +28,6 @@ public class LoginFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         //sends the user home(frame 3)
-        //todo implement login
         Button buttonLogin = view.findViewById(R.id.buttonHome);
         buttonLogin.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.action_loginFragment_to_homeFragment));
 

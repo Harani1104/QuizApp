@@ -20,7 +20,7 @@
         app:layout_constraintVertical_bias="0.597" />
 
     <Button
-        android:id="@+id/buttonMakeNew"
+        android:id="@+id/buttonNewQuiz"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="make new quiz"
