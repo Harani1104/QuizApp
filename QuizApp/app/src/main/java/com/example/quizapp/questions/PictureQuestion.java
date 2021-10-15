@@ -16,7 +16,6 @@ public class PictureQuestion {
         this.trueAnswerIndex = trueAnswerIndex;
     }
 
-
     public int getQuestionResId()
     {
         return questionResId;
@@ -42,6 +41,5 @@ public class PictureQuestion {
 
     public int[] getAnswersResId() { return answersResId; }
     public void setAnswersResId(int[] answersResId) { this.answersResId = answersResId; }
-
 }
 
