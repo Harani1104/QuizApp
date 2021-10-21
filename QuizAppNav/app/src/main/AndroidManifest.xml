@@ -18,6 +18,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".HomeFrag"
+                    android:exported="false"/>
+        <activity android:name=".LoginFrag"
+            android:exported="false"/>
+        <activity android:name=".CreateQuiz"
+            android:exported="false"/>
+
+
     </application>
+
 
 </manifest>
