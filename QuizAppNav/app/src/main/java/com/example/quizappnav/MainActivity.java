@@ -12,13 +12,13 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.frag_login);
+        setContentView(R.layout.starter_page);
 
         login = findViewById(R.id.loginButton);
 
 
         login.setOnClickListener((view -> {
-            Intent browse = new Intent(getApplicationContext(),HomeFrag.class);
+            Intent browse = new Intent(getApplicationContext(),StarterPage.class);
             startActivity(browse);
         }));
     }

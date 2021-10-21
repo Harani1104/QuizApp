@@ -10,7 +10,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.QuizAppNav">
         <activity
-            android:name=".MainActivity"
+            android:name=".NewUser"
+            android:exported="true" />
+        <activity
+            android:name=".StarterPage"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -18,15 +21,18 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".HomeFrag"
-                    android:exported="false"/>
-        <activity android:name=".LoginFrag"
-            android:exported="false"/>
-        <activity android:name=".CreateQuiz"
-            android:exported="false"/>
-
-
+        <activity
+            android:name=".MainActivity"
+            android:exported="false"></activity>
+        <activity
+            android:name=".HomeFrag"
+            android:exported="false" />
+        <activity
+            android:name=".LoginFrag"
+            android:exported="false" />
+        <activity
+            android:name=".CreateQuiz"
+            android:exported="false" />
     </application>
-
 
 </manifest>
