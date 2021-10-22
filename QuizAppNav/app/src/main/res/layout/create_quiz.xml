@@ -7,15 +7,9 @@
     android:layout_height="match_parent"
     android:gravity="center"
     android:orientation="vertical"
+    android:background="@color/mainColor"
     >
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="top|center"
-        android:orientation="vertical"
-        android:background="@color/mainColor"
 
-        >
         <TextView
             android:id="@+id/quizApp"
             android:layout_width="wrap_content"
@@ -31,33 +25,30 @@
             />
 
 
-        />
+    <EditText
+        android:id="@+id/quizName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="75dp"
+        android:ems="10"
+        android:hint="Navn på quiz"
 
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/question"
+        app:layout_constraintEnd_toEndOf="@id/quizApp"
+        app:layout_constraintHorizontal_bias="0.511"
+        app:layout_constraintStart_toStartOf="@id/quizApp"
+        app:layout_constraintTop_toBottomOf="@+id/quizApp"
+        app:layout_constraintTop_toTopOf="@id/quizApp"
+        app:layout_constraintVertical_chainStyle="packed" />
 
-        <EditText
-            android:id="@+id/quizName"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
-            android:ems="10"
-            android:hint="Navn på quiz"
-
-            android:textColor="@color/black"
-            app:layout_constraintBottom_toTopOf="@+id/question"
-            app:layout_constraintEnd_toEndOf="@id/quizApp"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="@id/quizApp"
-            app:layout_constraintTop_toTopOf="@id/quizApp"
-            app:layout_constraintVertical_chainStyle="packed"
-            app:layout_constraintTop_toBottomOf="@+id/quizApp"
-            />
-        <Button
+    <EditText
             android:id="@+id/question"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:ems="10"
-            android:text="Spørsmål 1"
+            android:hint="Spørsmål 1"
             android:textColor="@color/black"
             android:backgroundTint="@color/white"
             app:layout_constraintEnd_toEndOf="@+id/quizName"
@@ -65,7 +56,19 @@
             app:layout_constraintStart_toStartOf="@+id/quizName"
             app:layout_constraintTop_toBottomOf="@+id/quizName"
             />
-    </LinearLayout>
+
+    <Button
+        android:id="@+id/createSubmit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:backgroundTint="@color/white"
+        android:text="Submit"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
 
 
 

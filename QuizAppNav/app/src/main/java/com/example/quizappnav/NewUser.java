@@ -19,10 +19,10 @@ public class NewUser extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.new_user);
 
-//        submit = findViewById(R.id.submitUser);
-//        submit.setOnClickListener((view -> {
-//            Intent submitLog = new Intent(getApplicationContext(),LoginFrag.class);
-//            startActivity(submitLog);
-//        }));
+        submit = findViewById(R.id.userSubmit);
+        submit.setOnClickListener((view -> {
+            Intent submitLog = new Intent(getApplicationContext(),StarterPage.class);
+            startActivity(submitLog);
+        }));
     }
     }

@@ -17,7 +17,7 @@ public class StarterPage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.starter_page);
 
-        login = findViewById(R.id.loginButton);
+        login = findViewById(R.id.loginStarter);
         newUser = findViewById(R.id.newUser);
         kode = findViewById(R.id.kode);
 
@@ -27,7 +27,7 @@ public class StarterPage extends AppCompatActivity {
         }));
 
         newUser.setOnClickListener((view -> {
-            Intent newUserLog = new Intent(getApplicationContext(),LoginFrag.class);
+            Intent newUserLog = new Intent(getApplicationContext(),NewUser.class);
             startActivity(newUserLog);
         }));
 
