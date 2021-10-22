@@ -25,19 +25,16 @@ app:layout_constraintTop_toTopOf="parent"
 app:layout_constraintVertical_chainStyle="packed" />
 
     <Button
-        android:id="@+id/login"
+        android:id="@+id/loginStarter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="123dp"
         android:layout_marginTop="100dp"
-        android:layout_marginEnd="124dp"
         android:backgroundTint="@color/white"
         android:ems="10"
         android:text="Login"
         android:textColor="@color/black"
         app:layout_constraintBottom_toTopOf="@+id/newUser"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/quizApp"
         app:layout_constraintVertical_bias="0.05" />
@@ -55,19 +52,19 @@ app:layout_constraintVertical_chainStyle="packed" />
         app:layout_constraintBottom_toTopOf="@+id/kode"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/login" />
+        app:layout_constraintTop_toBottomOf="@+id/loginStarter" />
 
     <Button
         android:id="@+id/kode"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="52dp"
-        android:layout_marginEnd="124dp"
         android:backgroundTint="@color/white"
         android:ems="10"
         android:text="Kode"
         android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/newUser" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
