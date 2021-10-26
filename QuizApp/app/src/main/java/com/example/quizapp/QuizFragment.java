@@ -179,17 +179,17 @@ public class QuizFragment extends Fragment implements View.OnClickListener {
         int trueAnswer = questionBank[currentQuestionIndex].getTrueAnswerIndex();
         // getting correct ans of current question
         int toastMessageId;
-        // if ans matches with the button clicked
+        // if answer matches with the button clicked
         if (userAnswer == trueAnswer) {
             toastMessageId = R.string.correct_answer;
             questionBank[currentQuestionIndex].setAnsweredTrue(true);
         } else {
-            // showing toast message correct
+            //showing toast message correct
             toastMessageId = R.string.wrong_answer;
             questionBank[currentQuestionIndex].setAnsweredTrue(false);
         }
 
-        //return toastMessageId;
+        //show message
         Toast.makeText(this.getActivity(), toastMessageId, Toast.LENGTH_SHORT).show();
     }
 }
