@@ -190,6 +190,6 @@ public class QuizFragment extends Fragment implements View.OnClickListener {
         }
 
         //return toastMessageId;
-        Toast.makeText(getActivity(), toastMessageId, Toast.LENGTH_SHORT).show();
+        Toast.makeText(this.getActivity(), toastMessageId, Toast.LENGTH_SHORT).show();
     }
 }
