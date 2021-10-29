@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".CreateQuiz"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/constraintLayout"
     android:layout_width="match_parent"
@@ -10,66 +11,128 @@
     android:background="@color/mainColor"
     >
 
-        <TextView
-            android:id="@+id/quizApp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Quiz App"
-            android:textColor="@android:color/black"
-            android:textSize="30sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_chainStyle="packed"
-            />
-
-
-    <EditText
-        android:id="@+id/quizName"
+    <TextView
+        android:id="@+id/quizApp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="75dp"
-        android:ems="10"
-        android:hint="Navn på quiz"
-
-        android:textColor="@color/black"
-        app:layout_constraintBottom_toTopOf="@+id/question"
-        app:layout_constraintEnd_toEndOf="@id/quizApp"
-        app:layout_constraintHorizontal_bias="0.511"
-        app:layout_constraintStart_toStartOf="@id/quizApp"
-        app:layout_constraintTop_toBottomOf="@+id/quizApp"
-        app:layout_constraintTop_toTopOf="@id/quizApp"
-        app:layout_constraintVertical_chainStyle="packed" />
+        android:text="Quiz App"
+        android:textColor="@android:color/black"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"
+        />
 
     <EditText
-            android:id="@+id/question"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:ems="10"
-            android:hint="Spørsmål 1"
-            android:textColor="@color/black"
-            android:backgroundTint="@color/white"
-            app:layout_constraintEnd_toEndOf="@+id/quizName"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="@+id/quizName"
-            app:layout_constraintTop_toBottomOf="@+id/quizName"
-            />
+        android:id="@+id/question"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:ems="10"
+        android:hint="Question"
+        android:textSize="20dp"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/quizApp" />
+
+    <EditText
+        android:id="@+id/alt1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="156dp"
+        android:backgroundTint="@color/white"
+        android:ems="10"
+        android:hint="Alternative 1"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.507"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/question" />
+
+    <EditText
+        android:id="@+id/alt2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="100dp"
+        android:backgroundTint="@color/white"
+        android:ems="10"
+        android:hint="Alternative 2"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/alt1" />
+
+    <EditText
+        android:id="@+id/alt3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="40dp"
+        android:backgroundTint="@color/white"
+        android:ems="10"
+        android:hint="Alternative 3"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/alt2" />
+
+    <EditText
+        android:id="@+id/alt4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:backgroundTint="@color/white"
+        android:ems="10"
+        android:hint="Alternative 4"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/alt3" />
 
     <Button
-        android:id="@+id/createSubmit"
+        android:id="@+id/finish"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="600dp"
         android:backgroundTint="@color/white"
-        android:text="Submit"
+        android:ems="5"
+        android:text="Finish"
         android:textColor="@color/black"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/nextQuest"
+        app:layout_constraintHorizontal_bias="0.02"
+        app:layout_constraintStart_toEndOf="@+id/previousQuest"
+        app:layout_constraintTop_toBottomOf="@+id/quizApp" />
+
+    <Button
+        android:id="@+id/nextQuest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="600dp"
+        android:layout_marginEnd="32dp"
+        android:backgroundTint="@color/white"
+        android:ems="5"
+        android:text="Next"
+        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/quizApp" />
 
-
+    <Button
+        android:id="@+id/previousQuest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="600dp"
+        android:backgroundTint="@color/white"
+        android:ems="5"
+        android:text="Prev"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/quizApp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
