@@ -4,12 +4,8 @@ import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.Fragment;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
+
 import android.widget.Button;
-import android.widget.TextView;
 
 public class HomeFrag extends AppCompatActivity {
 
@@ -27,7 +23,7 @@ public class HomeFrag extends AppCompatActivity {
 
         lagny = findViewById(R.id.lagNy);
         lagny.setOnClickListener((view -> {
-            Intent lagerNy = new Intent(getApplicationContext(),CreateQuiz.class);
+            Intent lagerNy = new Intent(getApplicationContext(), QuizOverview.class);
             startActivity(lagerNy);
         }));
     }
