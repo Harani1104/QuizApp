@@ -2,14 +2,12 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".HomeFrag"
     android:id="@+id/constraintLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@color/mainColor"
-
-    >
+    tools:context=".Browse">
 
     <TextView
         android:id="@+id/quizApp"
@@ -27,34 +25,42 @@
         app:layout_constraintVertical_chainStyle="packed" />
 
     <Button
-        android:id="@+id/browse"
+        android:id="@+id/filter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="36dp"
         android:backgroundTint="@color/white"
-        android:ems="10"
+        android:ems="6"
         android:text="Browse"
-        android:textColor="@color/black"
-        app:layout_constraintBottom_toTopOf="@+id/lagNy"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/quizApp"
-        app:layout_constraintVertical_bias="0.05" />
 
-    <Button
-        android:id="@+id/lagNy"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.894"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/quizApp" />
+
+    <EditText
+        android:id="@+id/filterText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:layout_marginBottom="100dp"
+        android:layout_marginTop="40dp"
         android:backgroundTint="@color/white"
         android:ems="10"
-        android:text="Lag Ny"
+        android:hint="Quiz Search"
         android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.144"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/browse" />
+        app:layout_constraintTop_toBottomOf="@+id/quizApp" />
 
+    <ListView
+        android:id="@+id/quizList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
 
+        android:layout_marginTop="152dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/quizApp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

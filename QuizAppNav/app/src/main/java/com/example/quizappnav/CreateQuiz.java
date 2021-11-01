@@ -11,6 +11,7 @@ public class CreateQuiz extends AppCompatActivity {
     Button prev;
     Button next;
     Button finish;
+    int index = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
