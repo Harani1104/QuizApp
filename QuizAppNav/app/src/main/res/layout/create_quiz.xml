@@ -43,39 +43,39 @@
         android:id="@+id/alt1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="156dp"
+        android:layout_marginTop="124dp"
         android:backgroundTint="@color/white"
         android:ems="10"
         android:hint="Alternative 1"
         android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.507"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/question" />
+        app:layout_constraintTop_toBottomOf="@+id/quizApp" />
 
     <EditText
         android:id="@+id/alt2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="100dp"
+        android:layout_marginTop="44dp"
         android:backgroundTint="@color/white"
         android:ems="10"
         android:hint="Alternative 2"
         android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/alt1" />
 
     <EditText
         android:id="@+id/alt3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
         android:layout_marginTop="40dp"
         android:backgroundTint="@color/white"
         android:ems="10"
         android:hint="Alternative 3"
         android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/alt2" />
 
@@ -98,13 +98,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
-        android:layout_marginTop="600dp"
+        android:layout_marginTop="500dp"
         android:backgroundTint="@color/white"
         android:ems="5"
         android:text="Finish"
         android:textColor="@color/black"
         app:layout_constraintEnd_toStartOf="@+id/nextQuest"
-        app:layout_constraintHorizontal_bias="0.02"
+        app:layout_constraintHorizontal_bias="0.03"
         app:layout_constraintStart_toEndOf="@+id/previousQuest"
         app:layout_constraintTop_toBottomOf="@+id/quizApp" />
 
@@ -112,25 +112,27 @@
         android:id="@+id/nextQuest"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="600dp"
-        android:layout_marginEnd="32dp"
+        android:layout_marginTop="500dp"
         android:backgroundTint="@color/white"
         android:ems="5"
         android:text="Next"
         android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.885"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/quizApp" />
 
     <Button
         android:id="@+id/previousQuest"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="600dp"
+        android:layout_marginTop="500dp"
         android:backgroundTint="@color/white"
         android:ems="5"
         android:text="Prev"
         android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.049"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/quizApp" />
 

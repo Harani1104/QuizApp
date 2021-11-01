@@ -16,10 +16,11 @@ public class HomeFrag extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.frag_home);
 
-        //browse = findViewById(R.id.browse);      //Not implemented yet
-//        browse.setOnClickListener((view -> {
-//            Intent browser = new Intent(getApplicationContext(),Browse.class);
-//            startActivity(browser);
+        browse = findViewById(R.id.browse);
+        browse.setOnClickListener((view -> {
+                    Intent browser = new Intent(getApplicationContext(), Browse.class);
+                    startActivity(browser);
+                }));
 
         lagny = findViewById(R.id.lagNy);
         lagny.setOnClickListener((view -> {
