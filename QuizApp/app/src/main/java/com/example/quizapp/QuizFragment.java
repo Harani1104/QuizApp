@@ -35,8 +35,7 @@ public class QuizFragment extends Fragment implements View.OnClickListener {
     }
 
     // setting up things
-    private Button button0, button1, button2, button3, resetButton;
-    private ImageButton nextButton, prevButton;
+    private Button button0, button1, button2, button3, resetButton, nextButton, prevButton;
     private ImageView Image;
     private TextView questionTextView;
     // to keep current question track

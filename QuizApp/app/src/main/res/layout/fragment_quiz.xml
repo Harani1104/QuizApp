@@ -39,24 +39,26 @@
             android:id="@+id/answer_button_0"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginRight="10dp"
             android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
             android:layout_weight="1"
             android:backgroundTint="@color/answer0"
             android:textAlignment="center"
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            tools:ignore="SpeakableTextPresentCheck" />
 
         <!--button1-->
         <Button
             android:id="@+id/answer_button_1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginRight="10dp"
             android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
             android:layout_weight="1"
             android:backgroundTint="@color/answer1"
             android:textAlignment="center"
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            tools:ignore="SpeakableTextPresentCheck" />
     </LinearLayout>
 
     <!--Using another LinearLayout for showing buttons
@@ -70,24 +72,26 @@
             android:id="@+id/answer_button_2"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginRight="10dp"
             android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
             android:layout_weight="1"
             android:backgroundTint="@color/answer2"
             android:textAlignment="center"
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            tools:ignore="SpeakableTextPresentCheck" />
 
         <!--button3-->
         <Button
             android:id="@+id/answer_button_3"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginRight="10dp"
             android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
             android:layout_weight="1"
             android:backgroundTint="@color/answer3"
             android:textAlignment="center"
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            tools:ignore="SpeakableTextPresentCheck" />
     </LinearLayout>
 
     <LinearLayout
@@ -95,19 +99,27 @@
         android:layout_height="wrap_content">
 
         <!--PreviousButton-->
-        <ImageButton
+
+        <Button
             android:id="@+id/prev_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:backgroundTint="#DFD2D1"/>
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:text="previous" />
 
-        <!--NextButton-->
-        <ImageButton
+        <Button
+
             android:id="@+id/next_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:backgroundTint="#DFD2D1"
-            android:text="@string/next_text" />
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:text="next" />
+
+        <!--NextButton-->
     </LinearLayout>
     <Button
         android:id="@+id/reset_button"
