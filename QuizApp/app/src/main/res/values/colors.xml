@@ -11,4 +11,5 @@
     <color name="answer1">#00FF00</color>
     <color name="answer2">#0000FF</color>
     <color name="answer3">#FFA500</color>
+    <color name="mainColor">#ffc566</color>
 </resources>

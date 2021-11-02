@@ -49,8 +49,14 @@
     <string name="e4">what are those</string>
     <string name="f4">none of the others</string>
 
+    <!--andre strenger-->
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="username">Username</string>
     <string name="next_text">next</string>
     <string name="prev_text">previous</string>
+
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
