@@ -5,44 +5,67 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".StartFragment" >
+    tools:context=".StartFragment"
+    android:background="@color/mainColor">
+
+
+
+    <TextView
+        android:id="@+id/quizApp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp"
+        android:text="Quiz App"
+        android:textColor="@android:color/black"
+        android:textSize="30sp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
 
     <Button
         android:id="@+id/buttonLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:text="login"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="100dp"
+        android:backgroundTint="@color/white"
+        android:ems="10"
+        android:text="Login"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/buttonNewUser"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.534" />
+        app:layout_constraintTop_toBottomOf="@+id/quizApp"
+        app:layout_constraintVertical_bias="0.05" />
 
     <Button
         android:id="@+id/buttonNewUser"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="new user"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="100dp"
+        android:backgroundTint="@color/white"
+        android:ems="10"
+        android:text="Ny Bruker"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/buttonSkipToQuiz"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonLogin"
-        app:layout_constraintVertical_bias="0.118" />
+        app:layout_constraintTop_toBottomOf="@+id/buttonLogin" />
 
     <Button
         android:id="@+id/buttonSkipToQuiz"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:text="code(guest)"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="52dp"
+        android:backgroundTint="@color/white"
+        android:ems="10"
+        android:text="Kode"
+        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.485"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonNewUser"
-        app:layout_constraintVertical_bias="0.111" />
+        app:layout_constraintTop_toBottomOf="@+id/buttonNewUser" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
