@@ -8,7 +8,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -16,12 +15,11 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
 import java.lang.reflect.Array;
 
-import com.example.quizapp.questions.*;
+import com.example.quizapp.model.questions.*;
 
 public class QuizFragment extends Fragment implements View.OnClickListener {
 
@@ -41,7 +39,7 @@ public class QuizFragment extends Fragment implements View.OnClickListener {
     // to keep current question track
     private int currentQuestionIndex = 0;
     Quiz quiz;
-    private PictureQuestion[] questionBank;
+    private Question[] questionBank;
 
 
 
@@ -166,11 +164,11 @@ public class QuizFragment extends Fragment implements View.OnClickListener {
         Log.d("Current", "onClick: " + currentQuestionIndex);
 
         //updates questions and answers
-        questionTextView.setText(questionBank[currentQuestionIndex].getQuestionResId());
-        button0.setText(questionBank[currentQuestionIndex].getAnswersResId()[0]);
-        button1.setText(questionBank[currentQuestionIndex].getAnswersResId()[1]);
-        button2.setText(questionBank[currentQuestionIndex].getAnswersResId()[2]);
-        button3.setText(questionBank[currentQuestionIndex].getAnswersResId()[3]);
+        questionTextView.setText(questionBank[currentQuestionIndex].getQuestion());
+        button0.setText(questionBank[currentQuestionIndex].getAnswers()[0]);
+        button1.setText(questionBank[currentQuestionIndex].getAnswers()[1]);
+        button2.setText(questionBank[currentQuestionIndex].getAnswers()[2]);
+        button3.setText(questionBank[currentQuestionIndex].getAnswers()[3]);
     }
 
     private void checkAnswer(int userAnswer) {

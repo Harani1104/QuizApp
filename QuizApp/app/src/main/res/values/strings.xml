@@ -8,48 +8,6 @@
     <string name="false_text">false</string>
     <string name="correct_answer">That\'s correct</string>
     <string name="wrong_answer">That\'s incorrect</string>
-
-    <!--alle spørsmål-->
-    <string name="a0">Question 1</string>
-    <string name="b0">Quest 2</string>
-    <string name="c0">next question is the fourth question</string>
-    <string name="d0">this is Question 4</string>
-    <string name="e0">i\'m Question 5</string>
-    <string name="f0">where is the question?</string>
-
-    <!--answer 1-->
-    <string name="a1">answer1</string>
-    <string name="b1">test</string>
-    <string name="c1">insert test</string>
-    <string name="d1">test</string>
-    <string name="e1">test1</string>
-    <string name="f1">in the corner</string>
-
-    <!--answer 2-->
-    <string name="a2">answer2</string>
-    <string name="b2">hello</string>
-    <string name="c2">Do 2</string>
-    <string name="d2">i\'m the second button </string>
-    <string name="e2">2</string>
-    <string name="f2">thrown out</string>
-
-    <!--answer 3-->
-    <string name="a3">heyyyyyy</string>
-    <string name="b3">wazzap</string>
-    <string name="c3">Do 3</string>
-    <string name="d3">where the question at?</string>
-    <string name="e3">generic String</string>
-    <string name="f3">on the back of the phone</string>
-
-    <!--answer 4-->
-    <string name="a4">xd</string>
-    <string name="b4">this is not the answer</string>
-    <string name="c4">that feeling when...</string>
-    <string name="d4">this is sparta</string>
-    <string name="e4">what are those</string>
-    <string name="f4">none of the others</string>
-
-    <!--andre strenger-->
     <string name="password">Password</string>
     <string name="login">Login</string>
     <string name="username">Username</string>
