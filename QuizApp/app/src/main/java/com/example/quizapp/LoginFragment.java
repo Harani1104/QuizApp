@@ -59,16 +59,19 @@ public class LoginFragment extends Fragment implements View.OnClickListener {
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
     public void onClick(View view) {
-        switch (view.getId()) {
-            case  R.id.buttonHome:
-                if (username.getText().toString().equals("test") &&
-                        password.getText().toString().equals("123")) {
-                    Navigation.findNavController(view).navigate(R.id.action_loginFragment_to_homeFragment);
-                } else {
-                    toast.show();
-                }
-                break;
-        }
+
+        Navigation.findNavController(view).navigate(R.id.action_loginFragment_to_homeFragment);
+
+//        switch (view.getId()) {
+//            case  R.id.buttonHome:
+//                if (username.getText().toString().equals("test") &&
+//                        password.getText().toString().equals("123")) {
+//                    Navigation.findNavController(view).navigate(R.id.action_loginFragment_to_homeFragment);
+//                } else {
+//                    toast.show();
+//                }
+//                break;
+//        }
     }
 
 
