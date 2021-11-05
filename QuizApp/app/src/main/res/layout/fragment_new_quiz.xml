@@ -29,7 +29,7 @@
         app:layout_constraintVertical_chainStyle="packed" />
 
     <EditText
-        android:id="@+id/question"
+        android:id="@+id/inQuestion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
@@ -43,7 +43,7 @@
         app:layout_constraintTop_toBottomOf="@+id/quizApp" />
 
     <EditText
-        android:id="@+id/alt1"
+        android:id="@+id/inAlt0"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="124dp"
@@ -57,7 +57,7 @@
         app:layout_constraintTop_toBottomOf="@+id/quizApp" />
 
     <EditText
-        android:id="@+id/alt2"
+        android:id="@+id/inAlt1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="44dp"
@@ -67,10 +67,10 @@
         android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/alt1" />
+        app:layout_constraintTop_toBottomOf="@+id/inAlt0" />
 
     <EditText
-        android:id="@+id/alt3"
+        android:id="@+id/inAlt2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
@@ -80,10 +80,10 @@
         android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/alt2" />
+        app:layout_constraintTop_toBottomOf="@+id/inAlt1" />
 
     <EditText
-        android:id="@+id/alt4"
+        android:id="@+id/inAlt3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
@@ -94,10 +94,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/alt3" />
+        app:layout_constraintTop_toBottomOf="@+id/inAlt2" />
 
     <Button
-        android:id="@+id/finish"
+        android:id="@+id/finishQuiz"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
@@ -138,6 +138,46 @@
         app:layout_constraintHorizontal_bias="0.049"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/quizApp" />
+
+    <RadioGroup
+        android:id="@+id/radioGroupCorrectAnswer"
+        android:layout_width="74dp"
+        android:layout_height="302dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/inAlt1"
+        app:layout_constraintHorizontal_bias="0.481"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.545">
+
+        <RadioButton
+            android:id="@+id/radioButtonCorrect0"
+            android:layout_width="match_parent"
+            android:layout_height="81dp"
+            android:digits="0"
+            android:text="RadioButton" />
+
+        <RadioButton
+            android:id="@+id/radioButtonCorrect1"
+            android:layout_width="match_parent"
+            android:layout_height="87dp"
+            android:digits="1"
+            android:text="RadioButton" />
+
+        <RadioButton
+            android:id="@+id/radioButtonCorrect2"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:digits="2"
+            android:text="RadioButton" />
+
+        <RadioButton
+            android:id="@+id/radioButtonCorrect3"
+            android:layout_width="match_parent"
+            android:layout_height="69dp"
+            android:digits="3"
+            android:text="RadioButton" />
+    </RadioGroup>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

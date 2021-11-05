@@ -8,6 +8,7 @@ public class Quiz {
     ArrayList<Question> questions;
 
     public Quiz() {
+        /*
         ArrayList<String> answer1 = new ArrayList<>();
         answer1.add("Galdhøpiggen");
         answer1.add("Mount Everest");
@@ -52,6 +53,7 @@ public class Quiz {
         questions.add(new Question("bruker datamaskiner straum?", 0, answer5));
         questions.add(new Question("Er Sverige hovudstaden i USA?", 3, answer6));
         this.questions = questions;
+         */
     }
 
     public Quiz(ArrayList<Question> questions) {
