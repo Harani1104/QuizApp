@@ -26,6 +26,10 @@ public class Quiz {
         };
     }
 
+    public Quiz(Question[] questions) {
+        this.questions = questions;
+    }
+
 
 
     public Question[] getQuestions() {
