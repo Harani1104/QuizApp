@@ -18,6 +18,7 @@ import androidx.annotation.RequiresApi;
 import androidx.fragment.app.Fragment;
 
 import java.lang.reflect.Array;
+import java.util.ArrayList;
 
 import com.example.quizapp.model.questions.*;
 
@@ -39,7 +40,7 @@ public class QuizFragment extends Fragment implements View.OnClickListener {
     // to keep current question track
     private int currentQuestionIndex = 0;
     Quiz quiz;
-    private Question[] questionBank;
+    private ArrayList<Question> questionBank;
 
 
 
@@ -76,7 +77,7 @@ public class QuizFragment extends Fragment implements View.OnClickListener {
     @Override
     public void onClick(View v) {
         // checking which button is clicked by user in this case user choose false
-        int NumberOfQuestions = Array.getLength(questionBank);
+        int NumberOfQuestions = questionBank.size();
         switch (v.getId()) {
             case R.id.answer_button_0:
                 checkAnswer(0);
@@ -115,9 +116,8 @@ public class QuizFragment extends Fragment implements View.OnClickListener {
                 }
                 break;
             case R.id.prev_button: // goes back to prev queastion
-                if (currentQuestionIndex > 0) {
-                    currentQuestionIndex = (currentQuestionIndex - 1)
-                            % questionBank.length;updateQuestion();
+                if (currentQuestionIndex > 0) { currentQuestionIndex = (currentQuestionIndex - 1) % questionBank.size();
+                    updateQuestion();
                 }
                 break;
             case R.id.reset_button:
@@ -139,9 +139,9 @@ public class QuizFragment extends Fragment implements View.OnClickListener {
         button3.setVisibility(View.VISIBLE);
         resetButton.setVisibility(View.INVISIBLE);
 
-        for (int i = 0; i < Array.getLength(questionBank);i++) {
+        for (int i = 0; i < questionBank.size(); i++) {
             //resets what the user answered
-            questionBank[i].setAnsweredTrue(false);
+            questionBank.get(i).setAnsweredTrue(false);
         }
 
         updateQuestion();
@@ -151,8 +151,8 @@ public class QuizFragment extends Fragment implements View.OnClickListener {
         // variable to hold the total score
         int total = 0;
         // counts how many answers are correct
-        for (int i = 0; i < Array.getLength(questionBank); i++) {
-            if(questionBank[i].getAnsweredTrue()) {
+        for (int i = 0; i < questionBank.size(); i++) {
+            if(questionBank.get(i).getAnsweredTrue()) {
                 total++;
             }
         }
@@ -164,26 +164,26 @@ public class QuizFragment extends Fragment implements View.OnClickListener {
         Log.d("Current", "onClick: " + currentQuestionIndex);
 
         //updates questions and answers
-        questionTextView.setText(questionBank[currentQuestionIndex].getQuestion());
-        button0.setText(questionBank[currentQuestionIndex].getAnswers()[0]);
-        button1.setText(questionBank[currentQuestionIndex].getAnswers()[1]);
-        button2.setText(questionBank[currentQuestionIndex].getAnswers()[2]);
-        button3.setText(questionBank[currentQuestionIndex].getAnswers()[3]);
+        questionTextView.setText(questionBank.get(currentQuestionIndex).getQuestion());
+        button0.setText(questionBank.get(currentQuestionIndex).getAnswers().get(0));
+        button1.setText(questionBank.get(currentQuestionIndex).getAnswers().get(1));
+        button2.setText(questionBank.get(currentQuestionIndex).getAnswers().get(2));
+        button3.setText(questionBank.get(currentQuestionIndex).getAnswers().get(3));
     }
 
     private void checkAnswer(int userAnswer) {
         //fetch the true answer
-        int trueAnswer = questionBank[currentQuestionIndex].getTrueAnswerIndex();
+        int trueAnswer = questionBank.get(currentQuestionIndex).getTrueAnswerIndex();
         // getting correct ans of current question
         int toastMessageId;
         // if answer matches with the button clicked
         if (userAnswer == trueAnswer) {
             toastMessageId = R.string.correct_answer;
-            questionBank[currentQuestionIndex].setAnsweredTrue(true);
+            questionBank.get(currentQuestionIndex).setAnsweredTrue(true);
         } else {
             //showing toast message correct
             toastMessageId = R.string.wrong_answer;
-            questionBank[currentQuestionIndex].setAnsweredTrue(false);
+            questionBank.get(currentQuestionIndex).setAnsweredTrue(false);
         }
 
         //show message
