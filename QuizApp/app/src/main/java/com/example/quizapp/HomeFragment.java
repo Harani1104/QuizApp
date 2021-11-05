@@ -32,12 +32,10 @@ public class HomeFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         //sends the user browse(frame 5)
-        //todo implement browser
         Button buttonBrowse = view.findViewById(R.id.buttonBrowse);
         buttonBrowse.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.action_homeFragment_to_browseFragment));
 
         //sends the user to the quizmaker (frame 4)
-        //TODO implement quizmaker
         Button buttonNewQuiz= view.findViewById(R.id.buttonNewQuiz);
         buttonNewQuiz.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.action_homeFragment_to_newQuizFragment));
     }

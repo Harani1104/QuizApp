@@ -18,21 +18,21 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
-    private FirebaseFirestore firestoreDb;
-    private CollectionReference quizCollectionReference;
+    //private FirebaseFirestore firestoreDb;
+    //private CollectionReference quizCollectionReference;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        firestoreDb = FirebaseFirestore.getInstance();
-        quizCollectionReference = firestoreDb.collection("quizes");
+        //firestoreDb = FirebaseFirestore.getInstance();
+        //quizCollectionReference = firestoreDb.collection("quizes");
         //generateTestQuiz();
     }
-
+/*
     private void createFireStoreReadListener(){
-        /*
+
         quizCollectionReference.get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
             @Override
             public void onComplete(@NonNull Task<QuerySnapshot> task) {
@@ -44,10 +44,8 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
-
-         */
     }
-/*
+
     @Override
     protected void onResume() {
         super.onResume();
@@ -58,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onPause() {
         super.onPause();
     }
-*/
+
     public void generateTestQuiz(){
         ArrayList<String> answer1 = new ArrayList<>();
         answer1.add("Galdhøpiggen");
@@ -105,6 +103,7 @@ public class MainActivity extends AppCompatActivity {
         questions.add(new Question("Er Sverige hovudstaden i USA?", 3, answer6));
 
         Quiz quiz = new Quiz(questions);
-        quizCollectionReference.add(quiz);
+        //quizCollectionReference.add(quiz);
     }
+    */
 }
