@@ -98,11 +98,11 @@ public class MainActivity extends AppCompatActivity {
 
         ArrayList<Question> questions = new ArrayList<>();
         questions.add(new Question("kva er verdas høgaste fjell?", 1, answer1));
-        questions.add(new Question("i kva land ligg Bergen?", 1, answer2));
-        questions.add(new Question("kan ein bil vere blå?", 1, answer3));
+        questions.add(new Question("i kva land ligg Bergen?", 2, answer2));
+        questions.add(new Question("kan ein bil vere blå?", 0, answer3));
         questions.add(new Question("Er Netflix ein streamingtjeneste?", 1, answer4));
-        questions.add(new Question("bruker datamaskiner straum?", 1, answer5));
-        questions.add(new Question("Er Sverige hovudstaden i USA?", 1, answer6));
+        questions.add(new Question("bruker datamaskiner straum?", 0, answer5));
+        questions.add(new Question("Er Sverige hovudstaden i USA?", 3, answer6));
 
         Quiz quiz = new Quiz(questions);
         quizCollectionReference.add(quiz);
