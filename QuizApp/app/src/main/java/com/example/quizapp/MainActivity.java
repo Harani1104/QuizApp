@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
 
         firestoreDb = FirebaseFirestore.getInstance();
         quizCollectionReference = firestoreDb.collection("quizes");
-        generateTestQuiz();
+        //generateTestQuiz();
     }
 
     private void createFireStoreReadListener(){
