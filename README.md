@@ -19,7 +19,7 @@ To do list: <br>
 
 Hva vi ville ha med fra prosjektbeskrivelse 2:
 
-Hva må være med:
+Hva må være med: <br>
 ▪ Opprettelse av bruker.<br>
 ▪ Bestemme tid for hvert spørsmål.<br>
 ▪ En bruker må være logget inn for å kunne lage en quiz.<br>
@@ -31,7 +31,7 @@ flest poeng.) <br>
 ▪ Privat koder for quizer <br>
 <br><br>
 
-Hva bør være med:
+Hva bør være med: <br>
 ▪ Søke på emne/navn. <br>
 ▪ Bilde, video eller lyd til spørsmål. <br>
 ▪ Hvis en bruker er logget inn, bør utførte quizer lagres på brukeren.
