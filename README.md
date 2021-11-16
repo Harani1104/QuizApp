@@ -34,13 +34,13 @@ flest poeng.) <br>
 Hva bør være med: <br>
 ▪ Søke på emne/navn. <br>
 ▪ Bilde, video eller lyd til spørsmål. <br>
-▪ Hvis en bruker er logget inn, bør utførte quizer lagres på brukeren.
+▪ Hvis en bruker er logget inn, bør utførte quizer lagres på brukeren. <br>
 ▪ Velge antall svar alternativer. <br>
 ▪ Antall spørsmål som er besvart, og hvor mange spørsmål som er igjen.
 (På hjørne helt øverst eller helt ned til venstre hjørne). <br>
 <br><br>
 
-- Hva kan være med:
+- Hva kan være med: <br>
 ▪ Ta tiden det tar for hver besvarelse.<br>
 ▪ Hint alternativer. <br>
 ▪ Statistikk: hvor mange spørsmål man pleier å få riktig <br>
