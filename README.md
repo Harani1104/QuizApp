@@ -29,3 +29,15 @@ Hva må være med:
 ▪ Resultat side. 1.plass 2. plass og 3.plass (Brukerne som svarer først for
 flest poeng.)
 ▪ Privat koder for quizer
+
+Hva bør være med:
+▪ Søke på emne/navn.
+▪ Bilde, video eller lyd til spørsmål.
+▪ Hvis en bruker er logget inn, bør utførte quizer lagres på brukeren.
+▪ Velge antall svar alternativer.
+▪ Antall spørsmål som er besvart, og hvor mange spørsmål som er igjen.
+(På hjørne helt øverst eller helt ned til venstre hjørne).
+- Hva kan være med:
+▪ Ta tiden det tar for hver besvarelse.
+▪ Hint alternativer.
+▪ Statistikk: hvor mange spørsmål man pleier å få riktig
