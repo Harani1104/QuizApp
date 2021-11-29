@@ -12,7 +12,7 @@ for å opprette ny quiz må alle felt vere fylt inn
 To do list: <br>
 -Login validering(Mangler)<br>
 -Gå til innlogging etter registrering(Navigering)<br>
--Quiz søkefelt forsvinner(problem)<br>
+-Quiz søkefelt forsvinner(problem) - Done <br> 
 -Komponenter fra "Material design" som "bottom navigation bar"(Implementering )
 
 
