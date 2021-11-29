@@ -36,12 +36,21 @@
         android:id="@+id/quizFragment"
         android:name="com.example.quizapp.QuizFragment"
         android:label="fragment_quiz"
-        tools:layout="@layout/fragment_quiz" />
+        tools:layout="@layout/fragment_quiz" >
+        <argument
+            android:name="quizKode"
+            app:argType="string"
+            app:nullable="true" />
+    </fragment>
     <fragment
         android:id="@+id/registerFragment"
         android:name="com.example.quizapp.RegisterFragment"
         android:label="fragment_register"
-        tools:layout="@layout/fragment_register" />
+        tools:layout="@layout/fragment_register" >
+        <action
+            android:id="@+id/action_registerFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
     <fragment
         android:id="@+id/loginFragment"
         android:name="com.example.quizapp.LoginFragment"
@@ -55,7 +64,11 @@
         android:id="@+id/browseFragment"
         android:name="com.example.quizapp.BrowseFragment"
         android:label="fragment_browse"
-        tools:layout="@layout/fragment_browse" />
+        tools:layout="@layout/fragment_browse" >
+        <action
+            android:id="@+id/action_browseFragment_to_quizFragment3"
+            app:destination="@id/quizFragment" />
+    </fragment>
     <fragment
         android:id="@+id/newQuizFragment"
         android:name="com.example.quizapp.NewQuizFragment"

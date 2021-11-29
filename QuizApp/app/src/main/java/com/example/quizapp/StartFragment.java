@@ -42,7 +42,10 @@ public class StartFragment extends Fragment {
         //køyrer ein ferdig quiz lagd for å teste (frame 6, deretter 7)
         //press the small buttons to go to next/prev question
         //TODO implement guest user
+        StartFragmentDirections.ActionStartFragmentToQuizFragment action = StartFragmentDirections.actionStartFragmentToQuizFragment(
+                "DZBZsLOZTbgxUInZH6CX");
+
         Button buttonSkipTOQuiz = view.findViewById(R.id.buttonSkipToQuiz);
-        buttonSkipTOQuiz.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.action_startFragment_to_quizFragment));
+        buttonSkipTOQuiz.setOnClickListener(Navigation.createNavigateOnClickListener(action));
     }
 }

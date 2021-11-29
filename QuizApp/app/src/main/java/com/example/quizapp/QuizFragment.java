@@ -16,11 +16,17 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.Navigation;
 
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 import com.example.quizapp.model.questions.*;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.QueryDocumentSnapshot;
+import com.google.firebase.firestore.QuerySnapshot;
 
 public class QuizFragment extends Fragment implements View.OnClickListener {
 
@@ -47,7 +53,30 @@ public class QuizFragment extends Fragment implements View.OnClickListener {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        quiz = new Quiz();
+        String quizKode = QuizFragmentArgs.fromBundle(getArguments()).getQuizKode();
+
+        FirebaseFirestore db = FirebaseFirestore.getInstance();
+        db.collection("quizes").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+            @Override
+            public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                if (task.isSuccessful()) {
+                    for (QueryDocumentSnapshot document : task.getResult()) {
+                        if (document.getId().equals(quizKode)) {
+                            quiz = document.toObject(Quiz.class);
+                        }
+                    }
+
+                } else {
+                    Log.w("", "Error getting documents.", task.getException());
+                }
+                finnishOnViewCreated(view, savedInstanceState);
+            }
+        });
+
+
+    }
+
+    public void finnishOnViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         questionBank = quiz.getQuestions();
 
         // setting up the elements associated with id

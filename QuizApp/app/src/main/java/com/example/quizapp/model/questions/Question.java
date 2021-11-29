@@ -1,5 +1,8 @@
 package com.example.quizapp.model.questions;
 
+import com.google.firebase.firestore.Exclude;
+import com.google.firebase.firestore.IgnoreExtraProperties;
+
 import java.util.ArrayList;
 
 public class Question {
@@ -18,6 +21,9 @@ public class Question {
         this.trueAnswerIndex = trueAnswerIndex;
     }
 
+    public Question(){
+    }
+
     public String getQuestion()
     {
         return question;
@@ -27,6 +33,7 @@ public class Question {
         this.question = question;
     }
 
+    @Exclude
     public boolean getAnsweredTrue() {
         return isAnsweredTrue;
     }
@@ -42,6 +49,6 @@ public class Question {
     }
 
     public ArrayList<String> getAnswers() { return answers; }
-    public void setAnswers(int[] answersResId) { this.answers = answers; }
+    public void setAnswers(ArrayList<String> answers) { this.answers = answers; }
 }
 
