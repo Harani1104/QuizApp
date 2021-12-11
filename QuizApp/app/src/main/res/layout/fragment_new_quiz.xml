@@ -30,6 +30,7 @@
 
     <EditText
         android:id="@+id/inQuestion"
+
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
@@ -155,28 +156,33 @@
             android:layout_width="match_parent"
             android:layout_height="81dp"
             android:digits="0"
-            android:text="RadioButton" />
+            android:text="Correct answer"
+            android:textSize="12sp" />
 
         <RadioButton
             android:id="@+id/radioButtonCorrect1"
             android:layout_width="match_parent"
             android:layout_height="87dp"
             android:digits="1"
-            android:text="RadioButton" />
+            android:text="Correct answer"
+            android:textSize="12sp"
+            />
 
         <RadioButton
             android:id="@+id/radioButtonCorrect2"
             android:layout_width="match_parent"
             android:layout_height="64dp"
             android:digits="2"
-            android:text="RadioButton" />
+            android:text="Correct answer"
+            android:textSize="12sp"/>
 
         <RadioButton
             android:id="@+id/radioButtonCorrect3"
             android:layout_width="match_parent"
             android:layout_height="69dp"
             android:digits="3"
-            android:text="RadioButton" />
+            android:text="Correct answer"
+            android:textSize="12sp"/>
     </RadioGroup>
 
 

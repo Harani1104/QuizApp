@@ -20,6 +20,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.google.firebase.auth.FirebaseAuth;
+
 import java.lang.reflect.Array;
 
 
@@ -36,6 +38,11 @@ public class LoginFragment extends Fragment implements View.OnClickListener {
     CharSequence text;
     Toast toast;
 
+    //Eksempelet hadde "private", usikker på om det er satt på riktig sted
+    FirebaseAuth mAuth;
+
+
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -46,6 +53,8 @@ public class LoginFragment extends Fragment implements View.OnClickListener {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        //Fortsatt usikker om jeg har lagt in auth riktig
+        mAuth = FirebaseAuth.getInstance();
 
         username = view.findViewById(R.id.loginUserName);
         password = view.findViewById(R.id.loginPassword);
