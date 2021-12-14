@@ -145,7 +145,8 @@ public class QuizFragment extends Fragment implements View.OnClickListener {
                 }
                 break;
             case R.id.prev_button: // goes back to prev queastion
-                if (currentQuestionIndex > 0) { currentQuestionIndex = (currentQuestionIndex - 1) % questionBank.size();
+                if (currentQuestionIndex > 0) {
+                    currentQuestionIndex = (currentQuestionIndex - 1) % questionBank.size();
                     updateQuestion();
                 }
                 break;

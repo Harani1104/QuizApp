@@ -30,18 +30,14 @@ public class StartFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         //sends the user to Login
-        //todo implement login
         Button buttonLogin = view.findViewById(R.id.buttonLogin);
         buttonLogin.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.action_startFragment_to_loginFragment));
 
         //sends the user to userregistration (frame 2)
-        //TODO implement user registration
         Button buttonNewUser = view.findViewById(R.id.buttonNewUser);
         buttonNewUser.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.action_startFragment_to_registerFragment));
 
         //køyrer ein ferdig quiz lagd for å teste (frame 6, deretter 7)
-        //press the small buttons to go to next/prev question
-        //TODO implement guest user
         StartFragmentDirections.ActionStartFragmentToQuizFragment action = StartFragmentDirections.actionStartFragmentToQuizFragment(
                 "DZBZsLOZTbgxUInZH6CX");
 
